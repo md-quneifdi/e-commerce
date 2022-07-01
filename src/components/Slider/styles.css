@@ -1,0 +1,109 @@
+.swiper {
+    width: 450px;
+    height: 60%;
+    transform: translate(-20%, -30%);
+}
+
+.swiper-wrapper {
+    padding-inline-start: 0;
+    margin-bottom: 3rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+.mySwiper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mySwiper .swiper-slide {
+    width: 20vw;
+    height: 12vh;
+    outline: none;
+    padding: 0;
+    transition: .7s;
+}
+
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    outline: none;
+    padding: 0;
+
+}
+
+.mySwiper .swiper-slide.min {
+    border: 4px solid hsl(26, 100%, 55%);
+    border-radius: 20px;
+    opacity: .5;
+}
+
+.mySwiper .swiper-slide:hover {
+    opacity: .5;
+}
+
+.mySwiper2 .swiper-button-next::after,
+.mySwiper2 .swiper-button-prev::after {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .mySwiper {
+        display: none;
+    }
+
+    .swiper-wrapper {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .mySwiper2 .swiper-button-next::after,
+    .mySwiper2 .swiper-button-prev::after {
+        display: block;
+    }
+
+    .mySwiper2 .swiper-slide img {
+        border-radius: 0;
+    }
+
+    .mySwiper2 .swiper-slide.min {
+        border-radius: 0;
+    }
+
+    .mySwiper2 .swiper-button-next::after,
+    .mySwiper2 .swiper-button-prev::after {
+        display: block;
+        width: 20px !important;
+        height: 20px !important;
+        background-color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        padding: 20px;
+        position: absolute !important;
+        z-index: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .mySwiper2 .swiper-button-next::after {
+        content: url(../../../public/images/icon-next.svg);
+        position: absolute;
+        right: 0;
+    }
+
+    .mySwiper2 .swiper-button-prev::after {
+        content: url(../../../public/images/icon-previous.svg);
+        position: absolute;
+        left: 4.2rem;
+    }
+
+
+}
